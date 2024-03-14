@@ -21,4 +21,15 @@
 			<xml outputDirectory=".build/coverage/coverage-xml"/>
 		</report>
 	</coverage>
+	<!--
+	<php>
+		<const name="REQUEST_FACTORY" value=""/>
+		<const name="RESPONSE_FACTORY" value=""/>
+		<const name="SERVER_REQUEST_FACTORY" value=""/>
+		<const name="STREAM_FACTORY" value=""/>
+		<const name="UPLOADED_FILE_FACTORY" value=""/>
+		<const name="URI_FACTORY" value=""/>
+		<const name="HTTP_CLIENT_FACTORY" value=""/>
+	</php>
+	-->
 </phpunit>
