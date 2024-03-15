@@ -8,8 +8,6 @@
 	<testsuites>
 		<testsuite name="chillerlan test suite">
 			<directory>tests</directory>
-			<!-- excluding this for now as it would require circular dependencies -->
-			<exclude>tests/ChillerlanFactoryTest.php</exclude>
 		</testsuite>
 	</testsuites>
 	<source>
