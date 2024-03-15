@@ -57,5 +57,10 @@ return [
 	],
 	'suppress_issue_types'            => [
 		'PhanAccessMethodInternal',
+		// temp silencer (missing dependency chillerlan/php/httpinterface)
+		'PhanUndeclaredClassMethod',
+		'PhanUndeclaredClassProperty',
+		'PhanTypeMismatchReturn',
+		'PhanUndeclaredClassReference',
 	],
 ];
