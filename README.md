@@ -109,7 +109,7 @@ Instead of setting the properties in the test classes, you can define them as co
 >
 	<testsuites>
 		<testsuite name="my test suite">
-			<directory>./tests/</directory>
+			<directory>tests</directory>
 		</testsuite>
 	</testsuites>
 	<source>

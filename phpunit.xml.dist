@@ -7,7 +7,7 @@
 >
 	<testsuites>
 		<testsuite name="chillerlan test suite">
-			<directory>./tests/</directory>
+			<directory>tests</directory>
 		</testsuite>
 	</testsuites>
 	<source>

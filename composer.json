@@ -28,7 +28,6 @@
 	"require-dev": {
 		"phpunit/phpunit": "^10.5",
 		"phan/phan": "^5.4",
-		"chillerlan/php-httpinterface": "dev-main#53e32078bc42f2e266b93362ecc06c9429683c68",
 		"guzzlehttp/guzzle": "^7.8"
 	},
 	"suggest": {
