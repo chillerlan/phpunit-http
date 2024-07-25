@@ -7,7 +7,6 @@
  * @copyright    2024 smiley
  * @license      MIT
  */
-
 declare(strict_types=1);
 
 namespace chillerlan\PHPUnitHttpTest;
@@ -16,9 +15,6 @@ use chillerlan\HTTP\CurlClient;
 use chillerlan\HTTP\Psr7\HTTPFactory;
 use chillerlan\PHPUnitHttp\ChillerlanHttpClientFactory;
 
-/**
- *
- */
 class ChillerlanFactoryTest extends PHPUnitHttpFactoryTestAbstract{
 
 	protected string $REQUEST_FACTORY     = HTTPFactory::class;

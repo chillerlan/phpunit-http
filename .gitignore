@@ -19,3 +19,4 @@ phpdoc.xml
 phpmd.xml
 phpunit.xml
 *cacert.pem
+phpstan.neon

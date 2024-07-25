@@ -7,7 +7,6 @@
  * @copyright    2024 smiley
  * @license      MIT
  */
-
 declare(strict_types=1);
 
 namespace chillerlan\PHPUnitHttp;
@@ -25,7 +24,11 @@ use function class_exists, constant, defined, file_exists, in_array, sprintf;
  */
 trait HttpFactoryTrait{
 
-	// constants in traits are allowed as of PHP 8.2
+	/**
+	 * @todo: constants in traits are allowed as of PHP 8.2
+	 *
+	 * @var array<string, string>
+	 */
 	private array $FACTORIES = [
 		'requestFactory'       => 'REQUEST_FACTORY',
 		'responseFactory'      => 'RESPONSE_FACTORY',
@@ -96,7 +99,7 @@ trait HttpFactoryTrait{
 		}
 
 		// we don't throw on these factories as they might not always be needed
-		if(in_array($constantName, ['SERVER_REQUEST_FACTORY', 'UPLOADED_FILE_FACTORY', 'HTTP_CLIENT_FACTORY'])){
+		if(in_array($constantName, ['SERVER_REQUEST_FACTORY', 'UPLOADED_FILE_FACTORY', 'HTTP_CLIENT_FACTORY'], true)){
 			return null;
 		}
 

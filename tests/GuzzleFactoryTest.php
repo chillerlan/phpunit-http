@@ -7,7 +7,6 @@
  * @copyright    2024 smiley
  * @license      MIT
  */
-
 declare(strict_types=1);
 
 namespace chillerlan\PHPUnitHttpTest;
@@ -16,9 +15,6 @@ use chillerlan\PHPUnitHttp\GuzzleHttpClientFactory;
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\HttpFactory;
 
-/**
- *
- */
 class GuzzleFactoryTest extends PHPUnitHttpFactoryTestAbstract{
 
 	protected string $REQUEST_FACTORY     = HTTPFactory::class;

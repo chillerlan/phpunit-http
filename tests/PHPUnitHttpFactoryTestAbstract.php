@@ -7,7 +7,6 @@
  * @copyright    2024 smiley
  * @license      MIT
  */
-
 declare(strict_types=1);
 
 namespace chillerlan\PHPUnitHttpTest;
@@ -17,11 +16,8 @@ use chillerlan\PHPUnitHttp\HttpClientFactoryInterface;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 use Throwable;
-use function json_decode, realpath;
+use function json_decode;
 
-/**
- *
- */
 abstract class PHPUnitHttpFactoryTestAbstract extends TestCase{
 	use HttpFactoryTrait;
 
@@ -35,7 +31,7 @@ abstract class PHPUnitHttpFactoryTestAbstract extends TestCase{
 	protected function setUp():void{
 
 		try{
-			$this->initFactories(realpath($this::CACERT));
+			$this->initFactories($this::CACERT);
 		}
 		catch(Throwable $e){
 			$this->markTestSkipped('unable to init http factories: '.$e->getMessage());
@@ -83,7 +79,7 @@ abstract class PHPUnitHttpFactoryTestAbstract extends TestCase{
 	public function testVonstantNotDefinedException():void{
 		$this->expectException(InvalidArgumentException::class);
 		$this->expectExceptionMessage('constant "REQUEST_FACTORY" not defined');
-		/** @phan-suppress-next-line PhanTypeObjectUnsetDeclaredProperty */
+
 		unset($this->REQUEST_FACTORY);
 
 		$this->initFactories('');
@@ -96,9 +92,6 @@ abstract class PHPUnitHttpFactoryTestAbstract extends TestCase{
 		$this->initFactories('foo');
 	}
 
-	/**
-	 * @phan-suppress PhanTypeObjectUnsetDeclaredProperty, PhanUndeclaredProperty, PhanPossiblyUnsetPropertyOfThis
-	 */
 	public function testInvokeWithoutHttpClient():void{
 		unset($this->httpClientFactory, $this->httpClient, $this->HTTP_CLIENT_FACTORY);
 

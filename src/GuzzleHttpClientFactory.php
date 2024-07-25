@@ -7,7 +7,6 @@
  * @copyright    2024 smiley
  * @license      MIT
  */
-
 declare(strict_types=1);
 
 namespace chillerlan\PHPUnitHttp;
@@ -25,9 +24,6 @@ use Psr\Http\Message\ResponseFactoryInterface;
  */
 final class GuzzleHttpClientFactory implements HttpClientFactoryInterface{
 
-	/**
-	 * @inheritDoc
-	 */
 	public function getClient(string $cacert, ResponseFactoryInterface $responseFactory):ClientInterface{
 		return new Client([
 			'verify'  => $cacert,

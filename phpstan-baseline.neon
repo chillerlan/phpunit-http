@@ -1,0 +1,11 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Access to protected property chillerlan\\\\HTTP\\\\HTTPOptions\\:\\:\\$ca_info\\.$#"
+			count: 1
+			path: src/ChillerlanHttpClientFactory.php
+
+		-
+			message: "#^Access to protected property chillerlan\\\\HTTP\\\\HTTPOptions\\:\\:\\$user_agent\\.$#"
+			count: 1
+			path: src/ChillerlanHttpClientFactory.php
