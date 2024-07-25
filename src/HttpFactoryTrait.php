@@ -17,7 +17,7 @@ use Psr\Http\Message\{
 	StreamFactoryInterface, UploadedFileFactoryInterface, UriFactoryInterface
 };
 use InvalidArgumentException;
-use function class_exists, constant, defined, file_exists, in_array, sprintf;
+use function class_exists, constant, defined, file_exists, in_array, realpath, sprintf, trim;
 
 /**
  * Invokes a set of PSR-17 HTTP factories and a PSR-18 HTTP client
@@ -72,12 +72,14 @@ trait HttpFactoryTrait{
 		}
 
 		if(isset($this->httpClientFactory)){
+			$cacert   = trim($cacert);
+			$realpath = realpath($cacert);
 
-			if(empty($cacert) || !file_exists($cacert)){
+			if($cacert === '' || !file_exists($cacert) || $realpath === false){
 				throw new InvalidArgumentException(sprintf('invalid CA bundle: "%s"', $cacert));
 			}
 
-			$this->httpClient = $this->httpClientFactory->getClient($cacert, $this->responseFactory);
+			$this->httpClient = $this->httpClientFactory->getClient($realpath, $this->responseFactory);
 		}
 	}
 
