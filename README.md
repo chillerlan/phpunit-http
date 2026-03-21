@@ -13,9 +13,9 @@ Add [PSR-17](https://www.php-fig.org/psr/psr-17/) factories and a [PSR-18](https
 [packagist-badge]: https://img.shields.io/packagist/v/chillerlan/phpunit-http.svg?logo=packagist&logoColor=fff
 [packagist]: https://packagist.org/packages/chillerlan/phpunit-http
 [license-badge]: https://img.shields.io/github/license/chillerlan/phpunit-http
-[license]: https://github.com/chillerlan/phpunit-http/blob/main/LICENSE
-[gh-action-badge]: https://img.shields.io/github/actions/workflow/status/chillerlan/phpunit-http/ci.yml?branch=main&logo=github&logoColor=fff
-[gh-action]: https://github.com/chillerlan/phpunit-http/actions/workflows/ci.yml?query=branch%3Amain
+[license]: https://github.com/chillerlan/phpunit-http/blob/v1.x/LICENSE
+[gh-action-badge]: https://img.shields.io/github/actions/workflow/status/chillerlan/phpunit-http/ci.yml?branch=v1.x&logo=github&logoColor=fff
+[gh-action]: https://github.com/chillerlan/phpunit-http/actions/workflows/ci.yml?query=branch%3Av1.x
 [downloads-badge]: https://img.shields.io/packagist/dt/chillerlan/phpunit-http.svg?logo=packagist&logoColor=fff
 [downloads]: https://packagist.org/packages/chillerlan/phpunit-http/stats
 
@@ -23,7 +23,7 @@ Add [PSR-17](https://www.php-fig.org/psr/psr-17/) factories and a [PSR-18](https
 
 ### Features
 
-A PSR-18 HTTP client and PSR-17 factories for your unit tetss. That's it.
+A PSR-18 HTTP client and PSR-17 factories for your unit tets. That's it.
 
 ### Requirements
 
