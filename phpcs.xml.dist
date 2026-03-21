@@ -145,8 +145,6 @@
 	<rule ref="Generic.ControlStructures.InlineControlStructure"/>
 	<rule ref="Generic.Formatting.DisallowMultipleStatements"/>
 	<!--<rule ref="Generic.Formatting.MultipleStatementAlignment"/>-->
-	<rule ref="Generic.Formatting.NoSpaceAfterCast"/>
-	<rule ref="Generic.Functions.CallTimePassByReference"/>
 	<rule ref="Generic.NamingConventions.InterfaceNameSuffix"/>
 	<rule ref="Generic.NamingConventions.TraitNameSuffix"/>
 	<rule ref="Generic.PHP.BacktickOperator"/>
@@ -181,7 +179,6 @@
 
 
 	<rule ref="Squiz.Arrays.ArrayBracketSpacing"/>
-	<rule ref="Squiz.Classes.DuplicateProperty"/>
 	<rule ref="Squiz.Classes.LowercaseClassKeywords"/>
 	<rule ref="Squiz.Classes.SelfMemberReference"/>
 	<rule ref="Squiz.Commenting.DocCommentAlignment"/>
