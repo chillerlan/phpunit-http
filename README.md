@@ -23,11 +23,11 @@ Add [PSR-17](https://www.php-fig.org/psr/psr-17/) factories and a [PSR-18](https
 
 ### Features
 
-A PSR-18 HTTP client and PSR-17 factories for your unit tetss. That's it.
+A PSR-18 HTTP client and PSR-17 factories for your unit tets. That's it.
 
 ### Requirements
 
-- PHP 8.1+
+- PHP 8.4+
   - required extensions may vary depending on the used HTTP client
 
 
@@ -40,12 +40,12 @@ Add this library along with PHPUnit and an optional HTTP client to the `require-
 ```json
 {
 	"require": {
-		"php": "^8.1"
+		"php": "^8.4"
 	},
 	"require-dev": {
-		"chillerlan/phpunit-http": "^1.0",
-		"guzzlehttp/guzzle": "^7.8",
-		"phpunit/phpunit": "^10.5"
+		"chillerlan/phpunit-http": "^2.0",
+		"guzzlehttp/guzzle": "^7.10",
+		"phpunit/phpunit": "^13.0"
 	}
 }
 ```

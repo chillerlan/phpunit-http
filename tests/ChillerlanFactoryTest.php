@@ -23,7 +23,7 @@ class ChillerlanFactoryTest extends PHPUnitHttpFactoryTestAbstract{
 	protected string $URI_FACTORY         = HTTPFactory::class;
 	protected string $HTTP_CLIENT_FACTORY = ChillerlanHttpClientFactory::class;
 
-	public function testHttpClientInstance():void{
+	public function httpClientInstance():void{
 		$this::assertInstanceOf(CurlClient::class, $this->httpClient);
 	}
 

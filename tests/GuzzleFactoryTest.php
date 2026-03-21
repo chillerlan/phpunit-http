@@ -23,7 +23,7 @@ class GuzzleFactoryTest extends PHPUnitHttpFactoryTestAbstract{
 	protected string $URI_FACTORY         = HTTPFactory::class;
 	protected string $HTTP_CLIENT_FACTORY = GuzzleHttpClientFactory::class;
 
-	public function testHttpClientInstance():void{
+	public function httpClientInstance():void{
 		$this::assertInstanceOf(Client::class, $this->httpClient);
 	}
 

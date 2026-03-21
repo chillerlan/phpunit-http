@@ -11,3 +11,21 @@ parameters:
 			identifier: property.protected
 			count: 1
 			path: src/ChillerlanHttpClientFactory.php
+
+		-
+			rawMessage: Cannot unset property chillerlan\PHPUnitHttpTest\PHPUnitHttpFactoryTestAbstract::$REQUEST_FACTORY because it might have hooks in a subclass.
+			identifier: unset.possiblyHookedProperty
+			count: 1
+			path: tests/PHPUnitHttpFactoryTestAbstract.php
+
+		-
+			rawMessage: Cannot unset property chillerlan\PHPUnitHttpTest\PHPUnitHttpFactoryTestAbstract::$httpClient because it might have hooks in a subclass.
+			identifier: unset.possiblyHookedProperty
+			count: 1
+			path: tests/PHPUnitHttpFactoryTestAbstract.php
+
+		-
+			rawMessage: Cannot unset property chillerlan\PHPUnitHttpTest\PHPUnitHttpFactoryTestAbstract::$httpClientFactory because it might have hooks in a subclass.
+			identifier: unset.possiblyHookedProperty
+			count: 1
+			path: tests/PHPUnitHttpFactoryTestAbstract.php

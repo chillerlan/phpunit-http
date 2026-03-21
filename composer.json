@@ -23,7 +23,7 @@
 	"minimum-stability": "stable",
 	"prefer-stable": true,
 	"require": {
-		"php": "^8.1"
+		"php": "^8.4"
 	},
 	"require-dev": {
 		"chillerlan/php-httpinterface": "^6.0",
@@ -31,7 +31,7 @@
 		"phan/phan": "^6.0.2",
 		"phpstan/phpstan": "^2.1.42",
 		"phpstan/phpstan-deprecation-rules": "^2.0.4",
-		"phpunit/phpunit": "^10.5",
+		"phpunit/phpunit": "^13.0",
 		"slevomat/coding-standard": "^8.28",
 		"squizlabs/php_codesniffer": "^4.0"
 	},

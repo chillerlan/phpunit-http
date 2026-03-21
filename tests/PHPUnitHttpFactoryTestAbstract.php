@@ -14,6 +14,7 @@ namespace chillerlan\PHPUnitHttpTest;
 use chillerlan\PHPUnitHttp\HttpFactoryTrait;
 use chillerlan\PHPUnitHttp\HttpClientFactoryInterface;
 use InvalidArgumentException;
+use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 use Throwable;
 use function json_decode;
@@ -21,7 +22,7 @@ use function json_decode;
 abstract class PHPUnitHttpFactoryTestAbstract extends TestCase{
 	use HttpFactoryTrait;
 
-	protected const CACERT = __DIR__.'/cacert.pem';
+	protected const string CACERT = __DIR__.'/cacert.pem';
 
 	protected string $REQUEST_FACTORY;
 	protected string $RESPONSE_FACTORY;
@@ -39,9 +40,11 @@ abstract class PHPUnitHttpFactoryTestAbstract extends TestCase{
 
 	}
 
-	abstract public function testHttpClientInstance():void;
+	#[Test]
+	abstract public function httpClientInstance():void;
 
-	public function testSendRequest():void{
+	#[Test]
+	public function sendRequest():void{
 		// wrapping this in try/catch as httpbin may have an outage
 		try{
 			$uri      = $this->uriFactory->createUri('https://httpbin.org/get');
@@ -67,7 +70,8 @@ abstract class PHPUnitHttpFactoryTestAbstract extends TestCase{
 
 	}
 
-	public function testInvalidClassException():void{
+	#[Test]
+	public function invalidClassException():void{
 		$this->expectException(InvalidArgumentException::class);
 		$this->expectExceptionMessage('invalid class: "whatever"');
 
@@ -76,7 +80,8 @@ abstract class PHPUnitHttpFactoryTestAbstract extends TestCase{
 		$this->initFactories('');
 	}
 
-	public function testVonstantNotDefinedException():void{
+	#[Test]
+	public function constantNotDefinedException():void{
 		$this->expectException(InvalidArgumentException::class);
 		$this->expectExceptionMessage('constant "REQUEST_FACTORY" not defined');
 		/** @phan-suppress-next-line PhanTypeObjectUnsetDeclaredProperty */
@@ -85,14 +90,16 @@ abstract class PHPUnitHttpFactoryTestAbstract extends TestCase{
 		$this->initFactories('');
 	}
 
-	public function testNoCacertException():void{
+	#[Test]
+	public function noCacertException():void{
 		$this->expectException(InvalidArgumentException::class);
 		$this->expectExceptionMessage('invalid CA bundle: "foo"');
 
 		$this->initFactories('foo');
 	}
 
-	public function testInvokeWithoutHttpClient():void{
+	#[Test]
+	public function invokeWithoutHttpClient():void{
 		/** @phan-suppress-next-line PhanTypeObjectUnsetDeclaredProperty, PhanUndeclaredProperty */
 		unset($this->httpClientFactory, $this->httpClient, $this->HTTP_CLIENT_FACTORY);
 

@@ -16,7 +16,7 @@ use Psr\Http\Message\ResponseFactoryInterface;
 
 interface HttpClientFactoryInterface{
 
-	public const USER_AGENT = 'chillerlanPHPUnitHttp/1.0.0 +https://github.com/chillerlan/phpunit-http';
+	public const string USER_AGENT = 'chillerlanPHPUnitHttp/2.0.0 +https://github.com/chillerlan/phpunit-http';
 
 	/**
 	 * Returns a fully prepared http client instance

@@ -25,11 +25,9 @@ use function class_exists, constant, defined, file_exists, in_array, realpath, s
 trait HttpFactoryTrait{
 
 	/**
-	 * @todo: constants in traits are allowed as of PHP 8.2
-	 *
 	 * @var array<string, string>
 	 */
-	private array $FACTORIES = [
+	final protected const array FACTORIES = [
 		'requestFactory'       => 'REQUEST_FACTORY',
 		'responseFactory'      => 'RESPONSE_FACTORY',
 		'streamFactory'        => 'STREAM_FACTORY',
@@ -55,7 +53,7 @@ trait HttpFactoryTrait{
 	 */
 	protected function initFactories(string $cacert = ''):void{
 
-		foreach($this->FACTORIES as $property => $const){
+		foreach($this::FACTORIES as $property => $const){
 			$class = $this->getFactoryClass($const);
 
 			// some interfaces may not always be needed or implemented
