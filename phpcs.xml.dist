@@ -108,8 +108,6 @@
 
 	<rule ref="SlevomatCodingStandard.Variables.DisallowSuperGlobalVariable">
 		<exclude-pattern>examples</exclude-pattern>
-		<exclude-pattern>src/Storage/SessionStorage.php</exclude-pattern>
-		<exclude-pattern>tests/Storage/SessionStorageTest.php</exclude-pattern>
 	</rule>
 
 	<rule ref="SlevomatCodingStandard.TypeHints.UnionTypeHintFormat">
@@ -218,7 +216,6 @@
 
 	<rule ref="PSR1.Files.SideEffects">
 		<exclude-pattern>examples</exclude-pattern>
-		<exclude-pattern>benchmark</exclude-pattern>
 	</rule>
 
 

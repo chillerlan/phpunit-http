@@ -79,7 +79,7 @@ abstract class PHPUnitHttpFactoryTestAbstract extends TestCase{
 	public function testVonstantNotDefinedException():void{
 		$this->expectException(InvalidArgumentException::class);
 		$this->expectExceptionMessage('constant "REQUEST_FACTORY" not defined');
-
+		/** @phan-suppress-next-line PhanTypeObjectUnsetDeclaredProperty */
 		unset($this->REQUEST_FACTORY);
 
 		$this->initFactories('');
@@ -93,10 +93,11 @@ abstract class PHPUnitHttpFactoryTestAbstract extends TestCase{
 	}
 
 	public function testInvokeWithoutHttpClient():void{
+		/** @phan-suppress-next-line PhanTypeObjectUnsetDeclaredProperty, PhanUndeclaredProperty */
 		unset($this->httpClientFactory, $this->httpClient, $this->HTTP_CLIENT_FACTORY);
 
 		$this->initFactories();
-
+		/** @phan-suppress-next-line PhanPossiblyUnsetPropertyOfThis */
 		$this::assertFalse(isset($this->httpClientFactory, $this->httpClient));
 	}
 
