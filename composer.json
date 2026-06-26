@@ -26,13 +26,12 @@
 		"php": "^8.4"
 	},
 	"require-dev": {
-		"chillerlan/php-httpinterface": "^6.0",
-		"guzzlehttp/guzzle": "^7.10",
-		"phan/phan": "^6.0.2",
-		"phpstan/phpstan": "^2.1.42",
-		"phpstan/phpstan-deprecation-rules": "^2.0.4",
-		"phpunit/phpunit": "^13.0",
-		"slevomat/coding-standard": "^8.28",
+		"chillerlan/php-httpinterface": "^7.0",
+		"guzzlehttp/guzzle": "^7.12",
+		"phan/phan": "^6.0.7",
+		"phpmd/phpmd": "^2.15",
+		"phpunit/phpunit": "^13.2",
+		"slevomat/coding-standard": "^8.29",
 		"squizlabs/php_codesniffer": "^4.0"
 	},
 	"suggest": {
@@ -51,8 +50,6 @@
 		"phan": "@php vendor/bin/phan",
 		"phpcs": "@php vendor/bin/phpcs",
 		"phpmd": "@php vendor/bin/phpmd src text ./phpmd.xml.dist",
-		"phpstan": "@php vendor/bin/phpstan",
-		"phpstan-baseline": "@php vendor/bin/phpstan --generate-baseline",
 		"phpunit": "@php vendor/bin/phpunit"
 	},
 	"config": {

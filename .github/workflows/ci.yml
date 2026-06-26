@@ -39,7 +39,7 @@ jobs:
 
     steps:
       - name: "Checkout"
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: "Install PHP"
         uses: shivammathur/setup-php@v2
@@ -53,16 +53,13 @@ jobs:
         run: composer validate --no-interaction --ansi --verbose --with-dependencies
 
       - name: "Install dependencies with composer"
-        uses: ramsey/composer-install@v3
+        uses: ramsey/composer-install@v4
 
       - name: "Run PHPCodeSniffer"
         run: php vendor/bin/phpcs
 
       - name: "Run phan"
         run: php vendor/bin/phan --target-php-version=${{ matrix.php-version }}
-
-#      - name: "Run PHPStan"
-#        run: php vendor/bin/phpstan
 
 
   tests:
@@ -82,7 +79,7 @@ jobs:
 
     steps:
       - name: "Checkout"
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: "Install PHP with extensions"
         uses: shivammathur/setup-php@v2
@@ -96,7 +93,7 @@ jobs:
         run: curl -o ./tests/cacert.pem https://curl.se/ca/cacert.pem
 
       - name: "Install dependencies with composer"
-        uses: ramsey/composer-install@v3
+        uses: ramsey/composer-install@v4
 
       - name: "Run tests with phpunit"
         run: php vendor/bin/phpunit --colors=always --configuration=phpunit.xml.dist
