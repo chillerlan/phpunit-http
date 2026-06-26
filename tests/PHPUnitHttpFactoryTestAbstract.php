@@ -73,7 +73,7 @@ abstract class PHPUnitHttpFactoryTestAbstract extends TestCase{
 	#[Test]
 	public function invalidClassException():void{
 		$this->expectException(InvalidArgumentException::class);
-		$this->expectExceptionMessage('invalid class: "whatever"');
+		$this->expectExceptionMessageIs('invalid class: "whatever"');
 
 		$this->REQUEST_FACTORY = 'whatever';
 
@@ -83,7 +83,7 @@ abstract class PHPUnitHttpFactoryTestAbstract extends TestCase{
 	#[Test]
 	public function constantNotDefinedException():void{
 		$this->expectException(InvalidArgumentException::class);
-		$this->expectExceptionMessage('constant "REQUEST_FACTORY" not defined');
+		$this->expectExceptionMessageIs('constant "REQUEST_FACTORY" not defined');
 		/** @phan-suppress-next-line PhanTypeObjectUnsetDeclaredProperty */
 		unset($this->REQUEST_FACTORY);
 
@@ -93,7 +93,7 @@ abstract class PHPUnitHttpFactoryTestAbstract extends TestCase{
 	#[Test]
 	public function noCacertException():void{
 		$this->expectException(InvalidArgumentException::class);
-		$this->expectExceptionMessage('invalid CA bundle: "foo"');
+		$this->expectExceptionMessageIs('invalid CA bundle: "foo"');
 
 		$this->initFactories('foo');
 	}
