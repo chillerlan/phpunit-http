@@ -83,7 +83,7 @@ abstract class PHPUnitHttpFactoryTestAbstract extends TestCase{
 	#[Test]
 	public function constantNotDefinedException():void{
 		$this->expectException(InvalidArgumentException::class);
-		$this->expectExceptionMessageIs('constant "REQUEST_FACTORY" not defined');
+		$this->expectExceptionMessageIsOrContains('constant "REQUEST_FACTORY" not defined');
 		/** @phan-suppress-next-line PhanTypeObjectUnsetDeclaredProperty */
 		unset($this->REQUEST_FACTORY);
 
