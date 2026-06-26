@@ -53,7 +53,7 @@ trait HttpFactoryTrait{
 	 */
 	protected function initFactories(string $cacert = ''):void{
 
-		foreach($this::FACTORIES as $property => $const){
+		foreach(static::FACTORIES as $property => $const){
 			$class = $this->getFactoryClass($const);
 
 			// some interfaces may not always be needed or implemented
